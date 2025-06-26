@@ -82,57 +82,57 @@ function logoutFunction() {
  }
 
  
-// function searchProducts(searchTerm) {
-//     let data = getData(); 
-//     let filteredProducts = data.filter(product => product.title.toLowerCase().includes(searchTerm));
+ function searchProducts(searchTerm) {
+    let data = getData(); 
+    let filteredProducts = data.filter(product => product.title.toLowerCase().includes(searchTerm));
 
-//     let cardContainer = document.getElementById("card-container");
-//     if (cardContainer) {
-//         cardContainer.innerHTML = ""; 
-//     } else {
-//         cardContainer = document.createElement("div");
-//         cardContainer.setAttribute("class","container mt-3");
-//         cardContainer.setAttribute("id","card-container");
-//         document.getElementById("main").appendChild(cardContainer);
-//     }
-//     let rowDiv = document.createElement("div");
-//     rowDiv.setAttribute("class","row");
-//     cardContainer.appendChild(rowDiv);
+    let cardContainer = document.getElementById("card-container");
+    if (cardContainer) {
+        cardContainer.innerHTML = ""; 
+    } else {
+        cardContainer = document.createElement("div");
+        cardContainer.setAttribute("class","container mt-3");
+        cardContainer.setAttribute("id","card-container");
+        document.getElementById("main").appendChild(cardContainer);
+    }
+    let rowDiv = document.createElement("div");
+    rowDiv.setAttribute("class","row");
+    cardContainer.appendChild(rowDiv);
 
-//     filteredProducts.forEach(product => {
-//         let colDiv = document.createElement("div");
-//         colDiv.setAttribute("class", "col-md-3 p-2");
+    filteredProducts.forEach(product => {
+        let colDiv = document.createElement("div");
+        colDiv.setAttribute("class", "col-md-3 p-2");
 
-//         let productCard = document.createElement("div");
-//         productCard.setAttribute("style", "box-shadow: 10px 10px 10px grey;height:auto");
-//         productCard.setAttribute("class", "d-flex flex-column align-items-center");
-//         let productImage = document.createElement("img");
-//         productImage.setAttribute("src", product.thumbnail);
-//         productImage.setAttribute("style", "width:100%;height:150px");
-//         productCard.appendChild(productImage);
+        let productCard = document.createElement("div");
+        productCard.setAttribute("style", "box-shadow: 10px 10px 10px grey;height:auto");
+        productCard.setAttribute("class", "d-flex flex-column align-items-center");
+        let productImage = document.createElement("img");
+        productImage.setAttribute("src", product.thumbnail);
+        productImage.setAttribute("style", "width:100%;height:150px");
+        productCard.appendChild(productImage);
 
-//         let productTitle = document.createElement("p");
-//         productTitle.setAttribute("class", "mt-2");
-//         productTitle.innerHTML = `<b>${product.title.substring(0, 25)}</b>`;
-//         productCard.appendChild(productTitle);
+        let productTitle = document.createElement("p");
+        productTitle.setAttribute("class", "mt-2");
+        productTitle.innerHTML = `<b>${product.title.substring(0, 25)}</b>`;
+        productCard.appendChild(productTitle);
 
-//         let h3 = document.createElement("h5");
-//         h3.innerHTML = `<label class='text-success'>${product.price} Rs.</label>`;
-//         productCard.appendChild(h3);
+        let h3 = document.createElement("h5");
+        h3.innerHTML = `<label class='text-success'>${product.price} Rs.</label>`;
+        productCard.appendChild(h3);
 
-//         let buttonViewMore = document.createElement("button");
-//         buttonViewMore.innerText = "View more";
-//         buttonViewMore.setAttribute("class", "btn btn-primary");
-//         buttonViewMore.setAttribute("style", "width:100%");
-//         buttonViewMore.addEventListener("click", () => {
-//             ViewMoreComponent(product);
-//         });
-//         productCard.appendChild(buttonViewMore);
+        let buttonViewMore = document.createElement("button");
+        buttonViewMore.innerText = "View more";
+        buttonViewMore.setAttribute("class", "btn btn-primary");
+        buttonViewMore.setAttribute("style", "width:100%");
+        buttonViewMore.addEventListener("click", () => {
+            ViewMoreComponent(product);
+        });
+        productCard.appendChild(buttonViewMore);
 
-//         colDiv.appendChild(productCard);
-//         rowDiv.appendChild(colDiv);
-//     });
-// }
+        colDiv.appendChild(productCard);
+        rowDiv.appendChild(colDiv);
+    });
+}
 
 function signInPage() {
     let main=document.getElementById("main");
